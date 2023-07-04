@@ -1,7 +1,7 @@
 # Object Detection Course
 
 cvzone==1.5.6
-ultralytics==8.0.26
+ultralytics>=8.0.26
 hydra-core>=1.2.0
 matplotlib>=3.2.2
 numpy>=1.18.5
