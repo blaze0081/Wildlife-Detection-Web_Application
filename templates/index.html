@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ObjectDetection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    <main>
+
+        <section class="hero" id="hero">
+            <div class="heroText">
+                <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                    WildLife Object Detection 
+                </h1>
+
+                <p class="text-secondary-white-color" data-aos="fade-up" data-aos-delay="1000">
+                    using state of the art YOLOv8 model on custom trained DataSet 
+                </p>
+                <div class="col-lg-5 col-12 mx-auto mt-5">
+                    <a href="/FrontPage" class="get-started-btn scrollto">                
+                        Photo/Video Detection
+                    </a>
+                    <a href="/webcam" class="get-started-btn scrollto">                     
+                        Camera Detection
+                    </a>
+                </div>
+            </div>
+
+            <div class="videoWrapper">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="videos/792bd98f3e617786c850493560e11c45.jpg">
+                    <source src="{{ url_for('static', filename='videos/814dc43e870597176cad645798825c03.mp4') }}" type="video/mp4">
+
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="overlay"></div>
+        </section>
+
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/home">
+                    <strong>Detect Now</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#hero">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Introduction</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Project</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="section-padding pb-0" id="about">
+            <div class="container mb-5 pb-lg-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mb-3" data-aos="fade-up">Introduction</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-3 mb-lg-5">
+                        <p class="me-4" data-aos="fade-up" data-aos-delay="300">Welcome to our cutting-edge website, where we bring you a remarkable solution for wild animal enthusiasts and researchers alike. With our advanced object detection system powered by the <a rel="nofollow" href="https://github.com/ultralytics/ultralytics" target="_blank">YOLOv8 Model</a>, we offer an unparalleled experience in identifying and tracking animals in their natural habitats. </p>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
+                        <p data-aos="fade-up" data-aos-delay="500">Whether you have a photo, video, or even access to a webcam, our platform enables you to seamlessly upload and analyze your media to detect and classify various wild animals. <br> </br> Join us as we embark on an extraordinary journey to uncover the hidden world of wildlife, using state-of-the-art technology to enhance our understanding and conservation efforts. </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="portfolio">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h2 class="mb-5 text-center" data-aos="fade-up">Project</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+
+                        <div class="portfolio-thumb" data-aos="fade-up">
+                            <a href="/FrontPage" class="image-popup">
+                                <img src="{{ url_for('static', filename='images/portfolio/bison.png') }}" class="img-fluid team-image" alt="">
+                            </a>
+                            <div class="portfolio-info">     
+                                <a href="/FrontPage">                
+                                <h4 class="portfolio-title mb-0">Photo/Video Detection</h4>
+                                </a>
+                                <p class="text-success">use .jpg/.png/.mp4 and other formats</p>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="portfolio-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
+                            <a href="/webcam" class="image-popup">
+                                <img src="{{ url_for('static', filename='images/portfolio/leopard.png') }}" class="img-fluid team-image" alt="">
+                            </a>
+                            <div class="portfolio-info">
+                                <a href="/webcam">                     
+                                <h4 class="portfolio-title mb-0">Camera Detection</h4>
+                                </a>
+                                <p class="text-warning">Connect your Camera for live detction</p>
+                            </div>
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.00810870501!2d75.79635107608708!3d26.903237760496435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db41bc81771d9%3A0x37d8626e724af95f!2sDepartment%20of%20Information%20Technology%20%26%20Communication!5e0!3m2!1sen!2sin!4v1688485888247!5m2!1sen!2sin" class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <h5 class="text-white">
+                        <i class="bi-geo-alt-fill me-2"></i>
+                        Jaipur, Rajasthan
+                    </h5>
+
+                    <a href="mailto:f20212427@hyderabad.bits-pilani.ac.in" class="custom-link mt-3 mb-5">
+                        f20212427@hyderabad.bits-pilani.ac.in
+                    </a>
+                </div>
+
+                <div class="col-6">                    
+                    Made by : Bhaskar Mishra<br><br>                
+                </div>
+
+                <div class="col-lg-3 col-5 ms-auto">
+                    <ul class="social-icon">
+                        <li><a href="https://github.com/blaze0081">GitHub</a></li>                        
+                        <li><a href="#">Linkedin</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrollspy.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</body>
+</html>
