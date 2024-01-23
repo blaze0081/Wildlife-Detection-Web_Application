@@ -1,5 +1,6 @@
 # Wildlife-Detection-Web_Application
-Wildlife Detection Web_Application using YOLOv8 and Flask for PS1 Project (2023)
+Wildlife Detection Web_Application using YOLOv8 and Flask
+For training of model check https://github.com/blaze0081/Object_Detection-YOLOv8-
 
 # Wildlife Object_Detection through YOLOv8-
 ## _For Wildlife Surveillance and Protection_
